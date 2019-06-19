@@ -16,10 +16,12 @@ class NovoAnuncio extends Component{
 
 
         const file = this.foto.files[0]
-        const { name, size } = file
+        console.log(file)
+        const { name } = file
         const ref = storage.ref(name)
         //upload da img
-        ref
+        
+        
         .put(file)
         .then(//monta os dados
             img => { img.ref.getDownloadURL().then(result => {
@@ -37,8 +39,7 @@ class NovoAnuncio extends Component{
                 base.push('anuncios',{
                     data:NovoAnuncio
                 })
-                .then(()=>{
-                    
+                .then(()=>{                    
                         this.setState({sucess:true})
                     })          
             
@@ -60,10 +61,12 @@ class NovoAnuncio extends Component{
                     <HeaderInterno />
                     <h1>Novo Anúncio</h1>
                     <form onSubmit={this.handleSubmit}>
-                    <div className="form-group">
+
+                        <div className="form-group">
                         <label htmlFor="foto">Foto</label>
                             <input type="file" className="form-control" placeholder="Foto" id="foto" ref={(ref)=> this.foto = ref} />
                         </div>
+
                         <div className="form-group">
                             <label htmlFor="nome">Nome</label>
                             <input type="text" className="form-control" placeholder="Nome" id="nome" ref={(ref)=> this.nome = ref} />
@@ -71,7 +74,7 @@ class NovoAnuncio extends Component{
 
                         <div className="form-group">
                             <label htmlFor="categoria">Categoria</label>
-                            <select ref={(ref)=> this.categoria = ref}>
+                            <select ref={(ref)=> this.categoria = ref} className="form-control">
                             { this.props.categorias.map( cat =>
                                 <option value={cat.url} key={cat.icon}>{cat.categoria}</option>
                                 )

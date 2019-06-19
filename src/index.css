@@ -6,9 +6,48 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.area{
+  min-height: 593px;
+  height: 100%;
+}
+.filtro{
+  background-color: "#fff";
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding:10px;
+}
+.lista{
+  margin-top:20px;
+  text-decoration: none;
+  list-style: none
+}
+.item{
+  margin:15px 0px;
+}
+.lista>.item a{
+  color: rgb(37, 100, 172);  
+}
+.lista>.item span{
+  font-weight: bold;  
+}
+.conteudo{
+  background-color: "#fff";
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding:10px;
+  margin-left: 10px;
+}
+.titulo{
+  text-transform: capitalize;
+}
+.produto{
+  width: 200px;
+  height: 140px;
 }
