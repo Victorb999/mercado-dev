@@ -20,35 +20,35 @@ export default class src extends Component {
         const anuncio = this.state.anuncio
 
         if(this.state.isloading){
-            return <i className="fa fa-circle-notch fa-spin fa-3x fa-fw"></i>
+            return <i class="fas fa-spinner"></i>
         }
         return (
             <div>
                 <h1>{anuncio.nome}</h1>
                 <div className="row" style={{"padding":"10px"}}>
 
-                <div className="col-lg-6">
-                    <img src={anuncio.foto} alt="foto" className="produto"/>                
-                </div>
-                <div className="col-lg-6">   
-                    <ul className="lista">
-                        <li className="item">
-                            <span>Categoria: </span> {anuncio.categoria}
-                        </li>
-                        <li className="item">
-                            <span>Descrição: </span>{anuncio.descricao}
-                        </li>
-                        <li className="item">
-                            <span>Preço: </span>{anuncio.preco}
-                        </li>
-                        <li className="item">
-                            <span>Vendedor: </span>{anuncio.vendedor}
-                        </li>
-                        <li className="item">
-                            <span>Telefone: </span>{anuncio.telefone}
-                        </li>
-                    </ul>
-                </div>
+                    <div className="col-lg-6">
+                        <img src={anuncio.foto} alt="foto" className="produto"/>                
+                    </div>
+                    <div className="col-lg-6">   
+                        <ul className="lista">
+                            <li className="item">
+                                <span>Categoria: </span> {anuncio.categoria}
+                            </li>
+                            <li className="item">
+                                <span>Descrição: </span>{anuncio.descricao}
+                            </li>
+                            <li className="item">
+                                <span>Preço: </span>{anuncio.preco}
+                            </li>
+                            <li className="item">
+                                <span>Vendedor: </span>{anuncio.vendedor}
+                            </li>
+                            <li className="item">
+                                <span>Telefone: </span>{anuncio.telefone}
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         )

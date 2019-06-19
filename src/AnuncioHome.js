@@ -8,7 +8,7 @@ const AnuncioHome = ({id,anuncio}) =>{
           <Link to={`/categorias/${anuncio.categoria}/${id}`}><img className="card-img-top" src={anuncio.foto} alt="Foto" /></Link>
           <div className="card-body">
             <h4 className="card-title">
-              <a to={`/anuncios/ver/`}>{anuncio.nome}</a>
+              <span>{anuncio.nome}</span>
             </h4>
             <h5>{anuncio.preco}</h5>
             <p className="card-text">{anuncio.descricao}</p>

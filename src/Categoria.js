@@ -47,7 +47,7 @@ class Categoria extends Component {
                     {this.props.match.params.urlCategoria}
                 </h1>
                 {
-                    this.state.isloading && <i className="fa fa-circle-notch fa-spin fa-3x fa-fw"></i>
+                    this.state.isloading && <i className="fa fa-circle-notch fa-spin "></i>
                 }
                 {
                     !this.state.isloading && Object.keys(this.state.anuncios).length === 0 && <p>Nenhum produto cadastrado</p>
